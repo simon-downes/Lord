@@ -18,16 +18,20 @@ namespace Engine.Models
         Meadow    = 1001,
         Forest    = 1002,
         Wildlands = 1003,
-        Mountains = 1004
+        Mountains = 1004,
 
 
         // npcs 2xxx
 
-        // weapons 3xxx
+        // monsters 3xxx
+        Rat = 3000,
 
-        // armour 4xxx
+        // weapons 4xxx
+        PointyStick = 4000
 
-        // items 5xxx
+        // armour 5xxx
+
+        // items 6xxx
     }
 
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    class Item : Model
+    public class Item : Model
     {
 
         public int Price { get; }

@@ -1,53 +1,33 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Text;
 
 namespace Engine.Models
 {
-    public class Player : Actor, INotifyPropertyChanged
+    public class Player : Actor
     {
         // backing properties that allow the use of INotifyPropertyChanged and data bindings in the UI
-        private int _currentHitPoints;
-        private int _maxHitPoints;
+        
         private int _level;
-        private int _gold;
         private int _experiencePoints;
+        private Weapon _weapon;
 
-        public int CurrentHitPoints
+        public int Level
         {
-            get { return _currentHitPoints; }
-            set
+            get { return _level; }
+            protected set
             {
-                _currentHitPoints = Math.Max(0, Math.Min(value, _maxHitPoints));
-                OnPropertyChanged(nameof(CurrentHitPoints));
-            }
-        }
-
-        public int MaxtHitPoints
-        {
-            get { return _maxHitPoints; }
-            set
-            {
-                _maxHitPoints = Math.Max(0, value);
-                OnPropertyChanged(nameof(MaxtHitPoints));
-            }
-        }
-
-        public int Gold
-        {
-            get { return _gold; }
-            set
-            {
-                _gold = Math.Max(0, value);
-                OnPropertyChanged(nameof(Gold));
+                // can't lose levels
+                _level = Math.Max(_level, value);
+                OnPropertyChanged(nameof(Level));
+                OnPropertyChanged(nameof(Description));
             }
         }
 
         public int ExperiencePoints
         {
             get { return _experiencePoints; }
-            set
+            protected set
             {
                 // can't lose XP
                 _experiencePoints = Math.Max(_experiencePoints, value);
@@ -55,15 +35,11 @@ namespace Engine.Models
             }
         }
 
-        public int Level
-        {
-            get { return _level; }
-            set
-            {
-                // can't lose levels
-                _level = Math.Max(_level, value);
-                OnPropertyChanged(nameof(Level));
-                OnPropertyChanged(nameof(Description));
+        public Weapon Weapon {
+            get { return _weapon; }
+            set {
+                _weapon = value;
+                OnPropertyChanged(nameof(Weapon));
             }
         }
 
@@ -91,23 +67,11 @@ namespace Engine.Models
             }
         }
 
-        public Player(string name) : base((int) Types.Player, name, "")
+        public Player(string name) : base((int) Types.Player, name, "", 10, 10)
         {
             // new Level 1 player so set base stats
-            Level = 1;
-            ExperiencePoints = 0;
-            MaxtHitPoints = 10;
-            Gold = 10;
-
-            // full health to start with
-            CurrentHitPoints = MaxtHitPoints;
-
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            _level = 1;
+            _experiencePoints = 0;
         }
 
     }

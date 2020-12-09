@@ -29,9 +29,12 @@ namespace UI
             lblGold.DataBindings.Add("Text", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.Gold));
             lblXP.DataBindings.Add("Text", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.ExperiencePoints));
 
-            lblMaxHitPoints.DataBindings.Add("Text", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.MaxtHitPoints));
-            cpbHitPoints.DataBindings.Add("Maximum", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.MaxtHitPoints));
+            lblMaxHitPoints.DataBindings.Add("Text", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.MaxHitPoints));
+            cpbHitPoints.DataBindings.Add("Maximum", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.MaxHitPoints));
             cpbHitPoints.DataBindings.Add("Value", _gameSession.CurrentPlayer, nameof(_gameSession.CurrentPlayer.CurrentHitPoints));
+
+            lblWeapon.DataBindings.Add("Text", _gameSession.CurrentPlayer.Weapon, nameof(_gameSession.CurrentPlayer.Weapon.Name));
+
 
         }
 

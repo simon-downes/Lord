@@ -18,13 +18,17 @@ namespace Engine.Factories
 
             _items = new Dictionary<int, Item>();
 
-            _items.Add(1001, new Weapon(1001, "Pointy Stick", "A sturdy stick", 1, 1, 2));
+            _items.Add((int) Types.PointyStick, new Weapon((int) Types.PointyStick, "Pointy Stick", "A sturdy stick", 1, 1, 2));
 
         }
 
-        public static Item CreateItem( int typeID )
+        public static Item CreateItem( Types typeID )
         {
-            return _items.ContainsKey(typeID) ? _items[typeID].Clone() : null;
+            return _items.ContainsKey((int) typeID) ? _items[(int) typeID].Clone() : null;
+        }
+        public static Weapon CreateWeapon(Types typeID)
+        {
+            return _items.ContainsKey((int) typeID) ? ((Weapon) _items[(int) typeID]).Clone() : null;
         }
     }
 }

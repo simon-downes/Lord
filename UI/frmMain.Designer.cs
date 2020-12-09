@@ -32,6 +32,7 @@ namespace UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPlayer = new System.Windows.Forms.Panel();
+            this.lblWeapon = new System.Windows.Forms.Label();
             this.cpbHitPoints = new ColorProgressBar.ColorProgressBar();
             this.lblXP = new System.Windows.Forms.Label();
             this.lblGold = new System.Windows.Forms.Label();
@@ -45,18 +46,28 @@ namespace UI
             this.lblPlayerName = new System.Windows.Forms.Label();
             this.txtMessages = new System.Windows.Forms.RichTextBox();
             this.pnlLocation = new System.Windows.Forms.Panel();
+            this.btnExplore = new System.Windows.Forms.Button();
+            this.btnSouth = new System.Windows.Forms.Button();
+            this.btnEast = new System.Windows.Forms.Button();
+            this.btnWest = new System.Windows.Forms.Button();
+            this.btnNorth = new System.Windows.Forms.Button();
             this.lblLocationDesc = new System.Windows.Forms.Label();
             this.lblLocationName = new System.Windows.Forms.Label();
             this.imgLocation = new System.Windows.Forms.PictureBox();
-            this.btnNorth = new System.Windows.Forms.Button();
-            this.btnWest = new System.Windows.Forms.Button();
-            this.btnEast = new System.Windows.Forms.Button();
-            this.btnSouth = new System.Windows.Forms.Button();
-            this.btnExplore = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tlpMain.SuspendLayout();
             this.pnlPlayer.SuspendLayout();
             this.pnlLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLocation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -79,6 +90,12 @@ namespace UI
             // pnlPlayer
             // 
             this.pnlPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlPlayer.Controls.Add(this.pictureBox5);
+            this.pnlPlayer.Controls.Add(this.pictureBox4);
+            this.pnlPlayer.Controls.Add(this.pictureBox3);
+            this.pnlPlayer.Controls.Add(this.pictureBox2);
+            this.pnlPlayer.Controls.Add(this.pictureBox1);
+            this.pnlPlayer.Controls.Add(this.lblWeapon);
             this.pnlPlayer.Controls.Add(this.cpbHitPoints);
             this.pnlPlayer.Controls.Add(this.lblXP);
             this.pnlPlayer.Controls.Add(this.lblGold);
@@ -95,6 +112,15 @@ namespace UI
             this.pnlPlayer.Name = "pnlPlayer";
             this.pnlPlayer.Size = new System.Drawing.Size(274, 669);
             this.pnlPlayer.TabIndex = 4;
+            // 
+            // lblWeapon
+            // 
+            this.lblWeapon.AutoSize = true;
+            this.lblWeapon.Location = new System.Drawing.Point(92, 202);
+            this.lblWeapon.Name = "lblWeapon";
+            this.lblWeapon.Size = new System.Drawing.Size(35, 13);
+            this.lblWeapon.TabIndex = 22;
+            this.lblWeapon.Text = "label5";
             // 
             // cpbHitPoints
             // 
@@ -206,12 +232,13 @@ namespace UI
             this.txtMessages.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtMessages.Location = new System.Drawing.Point(733, 3);
             this.txtMessages.Name = "txtMessages";
-            this.txtMessages.Size = new System.Drawing.Size(516, 669);
+            this.txtMessages.Size = new System.Drawing.Size(518, 669);
             this.txtMessages.TabIndex = 5;
             this.txtMessages.Text = "";
             // 
             // pnlLocation
             // 
+            this.pnlLocation.BackColor = System.Drawing.SystemColors.Control;
             this.pnlLocation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlLocation.Controls.Add(this.btnExplore);
             this.pnlLocation.Controls.Add(this.btnSouth);
@@ -228,10 +255,59 @@ namespace UI
             this.pnlLocation.Size = new System.Drawing.Size(450, 669);
             this.pnlLocation.TabIndex = 6;
             // 
+            // btnExplore
+            // 
+            this.btnExplore.Location = new System.Drawing.Point(359, 426);
+            this.btnExplore.Name = "btnExplore";
+            this.btnExplore.Size = new System.Drawing.Size(75, 23);
+            this.btnExplore.TabIndex = 8;
+            this.btnExplore.Text = "Explore";
+            this.btnExplore.UseVisualStyleBackColor = true;
+            // 
+            // btnSouth
+            // 
+            this.btnSouth.Location = new System.Drawing.Point(57, 455);
+            this.btnSouth.Name = "btnSouth";
+            this.btnSouth.Size = new System.Drawing.Size(75, 23);
+            this.btnSouth.TabIndex = 7;
+            this.btnSouth.Text = "South";
+            this.btnSouth.UseVisualStyleBackColor = true;
+            this.btnSouth.Click += new System.EventHandler(this.btnSouth_Click);
+            // 
+            // btnEast
+            // 
+            this.btnEast.Location = new System.Drawing.Point(97, 426);
+            this.btnEast.Name = "btnEast";
+            this.btnEast.Size = new System.Drawing.Size(75, 23);
+            this.btnEast.TabIndex = 6;
+            this.btnEast.Text = "East";
+            this.btnEast.UseVisualStyleBackColor = true;
+            this.btnEast.Click += new System.EventHandler(this.btnEast_Click);
+            // 
+            // btnWest
+            // 
+            this.btnWest.Location = new System.Drawing.Point(16, 426);
+            this.btnWest.Name = "btnWest";
+            this.btnWest.Size = new System.Drawing.Size(75, 23);
+            this.btnWest.TabIndex = 5;
+            this.btnWest.Text = "West";
+            this.btnWest.UseVisualStyleBackColor = true;
+            this.btnWest.Click += new System.EventHandler(this.btnWest_Click);
+            // 
+            // btnNorth
+            // 
+            this.btnNorth.Location = new System.Drawing.Point(57, 397);
+            this.btnNorth.Name = "btnNorth";
+            this.btnNorth.Size = new System.Drawing.Size(75, 23);
+            this.btnNorth.TabIndex = 4;
+            this.btnNorth.Text = "North";
+            this.btnNorth.UseVisualStyleBackColor = true;
+            this.btnNorth.Click += new System.EventHandler(this.btnNorth_Click);
+            // 
             // lblLocationDesc
             // 
             this.lblLocationDesc.AutoSize = true;
-            this.lblLocationDesc.Location = new System.Drawing.Point(5, 399);
+            this.lblLocationDesc.Location = new System.Drawing.Point(13, 363);
             this.lblLocationDesc.Name = "lblLocationDesc";
             this.lblLocationDesc.Size = new System.Drawing.Size(73, 13);
             this.lblLocationDesc.TabIndex = 3;
@@ -241,7 +317,7 @@ namespace UI
             // 
             this.lblLocationName.AutoSize = true;
             this.lblLocationName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocationName.Location = new System.Drawing.Point(4, 370);
+            this.lblLocationName.Location = new System.Drawing.Point(12, 334);
             this.lblLocationName.Name = "lblLocationName";
             this.lblLocationName.Size = new System.Drawing.Size(112, 20);
             this.lblLocationName.TabIndex = 2;
@@ -249,63 +325,54 @@ namespace UI
             // 
             // imgLocation
             // 
-            this.imgLocation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.imgLocation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.imgLocation.Image = ((System.Drawing.Image)(resources.GetObject("imgLocation.Image")));
             this.imgLocation.Location = new System.Drawing.Point(0, 0);
             this.imgLocation.Name = "imgLocation";
-            this.imgLocation.Size = new System.Drawing.Size(446, 363);
+            this.imgLocation.Size = new System.Drawing.Size(448, 320);
             this.imgLocation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgLocation.TabIndex = 0;
             this.imgLocation.TabStop = false;
             // 
-            // btnNorth
+            // pictureBox1
             // 
-            this.btnNorth.Location = new System.Drawing.Point(173, 432);
-            this.btnNorth.Name = "btnNorth";
-            this.btnNorth.Size = new System.Drawing.Size(75, 23);
-            this.btnNorth.TabIndex = 4;
-            this.btnNorth.Text = "North";
-            this.btnNorth.UseVisualStyleBackColor = true;
-            this.btnNorth.Click += new System.EventHandler(this.btnNorth_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(95, 266);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnWest
+            // pictureBox2
             // 
-            this.btnWest.Location = new System.Drawing.Point(92, 461);
-            this.btnWest.Name = "btnWest";
-            this.btnWest.Size = new System.Drawing.Size(75, 23);
-            this.btnWest.TabIndex = 5;
-            this.btnWest.Text = "West";
-            this.btnWest.UseVisualStyleBackColor = true;
-            this.btnWest.Click += new System.EventHandler(this.btnWest_Click);
+            this.pictureBox2.Location = new System.Drawing.Point(97, 304);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnEast
+            // pictureBox3
             // 
-            this.btnEast.Location = new System.Drawing.Point(254, 461);
-            this.btnEast.Name = "btnEast";
-            this.btnEast.Size = new System.Drawing.Size(75, 23);
-            this.btnEast.TabIndex = 6;
-            this.btnEast.Text = "East";
-            this.btnEast.UseVisualStyleBackColor = true;
-            this.btnEast.Click += new System.EventHandler(this.btnEast_Click);
+            this.pictureBox3.Location = new System.Drawing.Point(135, 304);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
             // 
-            // btnSouth
+            // pictureBox4
             // 
-            this.btnSouth.Location = new System.Drawing.Point(173, 490);
-            this.btnSouth.Name = "btnSouth";
-            this.btnSouth.Size = new System.Drawing.Size(75, 23);
-            this.btnSouth.TabIndex = 7;
-            this.btnSouth.Text = "South";
-            this.btnSouth.UseVisualStyleBackColor = true;
-            this.btnSouth.Click += new System.EventHandler(this.btnSouth_Click);
+            this.pictureBox4.Location = new System.Drawing.Point(59, 304);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
             // 
-            // btnExplore
+            // pictureBox5
             // 
-            this.btnExplore.Location = new System.Drawing.Point(173, 461);
-            this.btnExplore.Name = "btnExplore";
-            this.btnExplore.Size = new System.Drawing.Size(75, 23);
-            this.btnExplore.TabIndex = 8;
-            this.btnExplore.Text = "Explore";
-            this.btnExplore.UseVisualStyleBackColor = true;
+            this.pictureBox5.Location = new System.Drawing.Point(97, 342);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
             // 
             // frmMain
             // 
@@ -322,6 +389,11 @@ namespace UI
             this.pnlLocation.ResumeLayout(false);
             this.pnlLocation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLocation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,6 +422,12 @@ namespace UI
         private System.Windows.Forms.Button btnEast;
         private System.Windows.Forms.Button btnWest;
         private System.Windows.Forms.Button btnNorth;
+        private System.Windows.Forms.Label lblWeapon;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

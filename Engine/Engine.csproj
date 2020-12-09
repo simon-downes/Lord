@@ -43,9 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\ItemFactory.cs" />
+    <Compile Include="Factories\MonsterFactory.cs" />
     <Compile Include="Factories\WorldFactory.cs" />
     <Compile Include="GameSession.cs" />
     <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Monster.cs" />
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\World.cs" />
