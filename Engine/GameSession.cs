@@ -35,7 +35,7 @@ namespace Engine
         {
             CurrentWorld = WorldFactory.Immensea();
             CurrentPlayer = player;
-            CurrentPlayer.Weapon = ItemFactory.CreateWeapon(Types.PointyStick);
+            CurrentPlayer.Weapon = ItemFactory.CreateWeapon(TypeID.PointyStick);
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
         }
 

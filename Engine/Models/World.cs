@@ -9,7 +9,7 @@ namespace Engine.Models
 
         protected Dictionary<Tuple<int, int>, WorldLocation> _locations = new Dictionary<Tuple<int, int>, WorldLocation>();
 
-        public World(Types typeID, string name, string description) : base(typeID, name, description)
+        public World(TypeID typeID, string name, string description) : base(typeID, name, description)
         {
             
 

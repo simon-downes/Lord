@@ -8,10 +8,11 @@ namespace Engine.Models
 {
     public class Encounter
     {
-        public int ActorTypeID { get; set; }
-        public int ChanceOfEncountering { get; set; }
+        public TypeID ActorTypeID { get; protected set; }
 
-        public Encounter(int actorTypeID, int chanceOfEncountering)
+        public int ChanceOfEncountering { get; protected set; }
+
+        public Encounter(TypeID actorTypeID, int chanceOfEncountering)
         {
             ActorTypeID = actorTypeID;
             ChanceOfEncountering = chanceOfEncountering;

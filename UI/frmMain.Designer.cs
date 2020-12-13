@@ -32,6 +32,11 @@ namespace UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPlayer = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblWeapon = new System.Windows.Forms.Label();
             this.cpbHitPoints = new ColorProgressBar.ColorProgressBar();
             this.lblXP = new System.Windows.Forms.Label();
@@ -54,20 +59,17 @@ namespace UI
             this.lblLocationDesc = new System.Windows.Forms.Label();
             this.lblLocationName = new System.Windows.Forms.Label();
             this.imgLocation = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tlpMain.SuspendLayout();
             this.pnlPlayer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLocation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -112,6 +114,46 @@ namespace UI
             this.pnlPlayer.Name = "pnlPlayer";
             this.pnlPlayer.Size = new System.Drawing.Size(274, 669);
             this.pnlPlayer.TabIndex = 4;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(97, 342);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(59, 304);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(135, 304);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(97, 304);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(95, 266);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // lblWeapon
             // 
@@ -240,6 +282,7 @@ namespace UI
             // 
             this.pnlLocation.BackColor = System.Drawing.SystemColors.Control;
             this.pnlLocation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlLocation.Controls.Add(this.pictureBox6);
             this.pnlLocation.Controls.Add(this.btnExplore);
             this.pnlLocation.Controls.Add(this.btnSouth);
             this.pnlLocation.Controls.Add(this.btnEast);
@@ -257,12 +300,10 @@ namespace UI
             // 
             // btnExplore
             // 
-            this.btnExplore.Location = new System.Drawing.Point(359, 426);
+            this.btnExplore.Location = new System.Drawing.Point(0, 0);
             this.btnExplore.Name = "btnExplore";
             this.btnExplore.Size = new System.Drawing.Size(75, 23);
-            this.btnExplore.TabIndex = 8;
-            this.btnExplore.Text = "Explore";
-            this.btnExplore.UseVisualStyleBackColor = true;
+            this.btnExplore.TabIndex = 0;
             // 
             // btnSouth
             // 
@@ -334,45 +375,13 @@ namespace UI
             this.imgLocation.TabIndex = 0;
             this.imgLocation.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBox6
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(95, 266);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(97, 304);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(135, 304);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(59, 304);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 25;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(97, 342);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.TabIndex = 26;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox6.Location = new System.Drawing.Point(308, 526);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
             // 
             // frmMain
             // 
@@ -386,14 +395,15 @@ namespace UI
             this.tlpMain.ResumeLayout(false);
             this.pnlPlayer.ResumeLayout(false);
             this.pnlPlayer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlLocation.ResumeLayout(false);
             this.pnlLocation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLocation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,6 +438,7 @@ namespace UI
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

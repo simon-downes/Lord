@@ -11,7 +11,7 @@ namespace Engine.Models
 
         public int RewardExperiencePoints { get; private set; }
 
-        public Monster(Types typeID, string name, string description, int maxHitPoints, int rewardGold, int rewardXP) : base(typeID, name, description, maxHitPoints, rewardGold)
+        public Monster(TypeID typeID, string name, string description, int maxHitPoints, int rewardGold, int rewardXP) : base(typeID, name, description, maxHitPoints, rewardGold)
         {
             RewardExperiencePoints = rewardXP;
         }

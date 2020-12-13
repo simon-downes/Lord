@@ -11,7 +11,7 @@ namespace Engine.Models
 
         public int Price { get; }
 
-        public Item(Types typeID, string name, string description, int price) : base(typeID, name, description)
+        public Item(TypeID typeID, string name, string description, int price) : base(typeID, name, description)
         {
             Price = price;
         }

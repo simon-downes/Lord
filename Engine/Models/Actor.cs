@@ -44,7 +44,7 @@ namespace Engine.Models
                 OnPropertyChanged(nameof(Gold));
             }
         }
-        protected Actor(Types typeID, string name, string description, int maxHitPoints, int gold ): base(typeID, name, description )
+        protected Actor(TypeID typeID, string name, string description, int maxHitPoints, int gold ): base(typeID, name, description )
         {
             _currentHitPoints = maxHitPoints;
             _maxHitPoints = maxHitPoints;

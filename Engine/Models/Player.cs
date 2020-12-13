@@ -67,7 +67,7 @@ namespace Engine.Models
             }
         }
 
-        public Player(string name) : base(Types.Player, name, "", 10, 10)
+        public Player(string name) : base(TypeID.Player, name, "", 10, 10)
         {
             // new Level 1 player so set base stats
             _level = 1;

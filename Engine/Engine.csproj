@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\ItemFactory.cs" />
-    <Compile Include="Factories\MonsterFactory.cs" />
+    <Compile Include="Factories\ActorFactory.cs" />
     <Compile Include="Factories\WorldFactory.cs" />
     <Compile Include="GameSession.cs" />
     <Compile Include="Models\Actor.cs" />
@@ -58,6 +58,7 @@
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Types.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

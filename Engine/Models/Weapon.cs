@@ -12,7 +12,7 @@ namespace Engine.Models
         public int MinDamage { get; private set; }
         public int MaxDamage { get; private set; }
 
-        public Weapon(Types typeID, string name, string description, int price, int minDamage, int maxDamage) : base(typeID, name, description, price)
+        public Weapon(TypeID typeID, string name, string description, int price, int minDamage, int maxDamage) : base(typeID, name, description, price)
         {
             MinDamage = minDamage;
             MaxDamage = maxDamage;
