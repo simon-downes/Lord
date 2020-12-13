@@ -9,20 +9,18 @@ namespace Engine.Factories
 {
     internal class MonsterFactory
     {
-        private static Dictionary<int, Monster> _monsters { get; }
+        private static Dictionary<Types, Monster> _monsters { get; } = new Dictionary<Types, Monster>();
 
         static MonsterFactory()
         {
 
-            _monsters = new Dictionary<int, Monster>();
-
-            _monsters.Add((int)Types.Rat, new Monster((int) Types.Rat, "Rat", "A small rat", 4, 5, 5));
+            _monsters.Add(Types.Rat, new Monster(Types.Rat, "Rat", "A small rat", 4, 5, 5));
 
         }
 
         public static Monster CreateItem(Types typeID)
         {
-            return _monsters.ContainsKey((int) typeID) ? _monsters[(int) typeID].Clone() : null;
+            return _monsters.ContainsKey(typeID) ? _monsters[typeID].Clone() : null;
         }
 
     }

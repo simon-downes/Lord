@@ -10,7 +10,7 @@ namespace Engine.Models
 
         public Image Image{ get; }
 
-        public Location(int typeId, string name, string description, Image img = null) : base(typeId, name, description)
+        public Location(Types typeID, string name, string description, Image img = null) : base(typeID, name, description)
         {
             Image = img;
         }

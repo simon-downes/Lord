@@ -11,12 +11,21 @@ namespace Engine.Models
         public int Y { get; }
         public Location Location { get; }
 
+        public Dictionary<Types, Encounter> Encounters { get; set; } = new Dictionary<Types, Encounter>();
+
         public WorldLocation( int x, int y, Location location)
         {
             X = x;
             Y = y;
             Location = location;
         }
+
+        public void AddEncounter( Types actor, int chanceOfEncountering )
+        {
+
+        }
+
+
 
     }
 }

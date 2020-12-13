@@ -4,13 +4,13 @@ namespace Engine.Models
 {
     public class Model
     {
-        public int TypeId { get; }
+        public Types TypeID { get; }
         public string Name { get; }
         public virtual string Description { get; protected set; }
 
-        public Model( int typeId, string name, string description )
+        public Model(Types typeID, string name, string description )
         {
-            TypeId = typeId;
+            TypeID = typeID;
             Name = name;
             Description = description;
         }

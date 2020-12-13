@@ -11,14 +11,14 @@ namespace Engine.Models
 
         public int Price { get; }
 
-        public Item(int id, string name, string description, int price) : base(id, name, description)
+        public Item(Types typeID, string name, string description, int price) : base(typeID, name, description)
         {
             Price = price;
         }
 
         public Item Clone()
         {
-            return new Item(TypeId, Name, Description, Price);
+            return new Item(TypeID, Name, Description, Price);
         }
 
     }

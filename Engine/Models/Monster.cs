@@ -11,14 +11,14 @@ namespace Engine.Models
 
         public int RewardExperiencePoints { get; private set; }
 
-        public Monster(int typeId, string name, string description, int maxHitPoints, int rewardGold, int rewardXP) : base(typeId, name, description, maxHitPoints, rewardGold)
+        public Monster(Types typeID, string name, string description, int maxHitPoints, int rewardGold, int rewardXP) : base(typeID, name, description, maxHitPoints, rewardGold)
         {
             RewardExperiencePoints = rewardXP;
         }
 
         public Monster Clone()
         {
-            return new Monster(TypeId, Name, Description, MaxHitPoints, Gold, RewardExperiencePoints);
+            return new Monster(TypeID, Name, Description, MaxHitPoints, Gold, RewardExperiencePoints);
         }
 
     }
